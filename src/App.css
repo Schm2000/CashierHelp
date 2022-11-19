@@ -14,7 +14,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #086375;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -26,6 +26,52 @@
 
 .App-link {
   color: #61dafb;
+}
+
+.Home-header{
+  font-family:"sans-serif";
+  font-size: 30px;
+  font-style: oblique;
+}
+
+.Circle {
+  border: 10px;
+  color: black;
+  fill: gray;
+}
+
+.bubble {
+  background: white;
+  color: black;
+  border-radius: 30px;
+  font-size: 40px;
+  min-height: 70px;
+}
+
+.Text {
+  margin-top: 50px;
+}
+
+.Timer{
+  background: rgb(175,252,65);
+  width: 42%;
+  color: #3c1642;
+  border-radius: 50px;
+  font-size: 50px;
+  margin-left: 28.5%;
+  margin-top: 10px;
+}
+
+.Time-button{
+  font-size: 20px;
+  border-radius: 4px;
+  background-color: #1dd3b0;
+}
+
+.Page-button{
+  font-size: 40px;
+  border-radius: 4px;
+  background-color: #7bfee4;
 }
 
 @keyframes App-logo-spin {
