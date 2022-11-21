@@ -271,9 +271,6 @@ function ClockThree() {
         }
         else if (genNumber == 1.97){
             changeTotalSet("N/A")
-            changeGenCost("N/A")
-            changeGenDiff("N/A")
-            changeGenNumber("N/A")
             setShowSix(true)
             setShowExThree(true)
             playEnd()
