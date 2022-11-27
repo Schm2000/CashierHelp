@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/CashierHelp/static/css/main.725f1d1c.css",
-    "main.js": "/CashierHelp/static/js/main.51f07ea9.js",
+    "main.js": "/CashierHelp/static/js/main.dd67e468.js",
     "static/js/845.6bdbe6bd.chunk.js": "/CashierHelp/static/js/845.6bdbe6bd.chunk.js",
     "static/js/787.542ef0e8.chunk.js": "/CashierHelp/static/js/787.542ef0e8.chunk.js",
     "static/media/success-bell.wav": "/CashierHelp/static/media/success-bell.c6c793794551b140a808.wav",
@@ -10,6 +10,8 @@
     "static/media/kTM9zaETj.png": "/CashierHelp/static/media/kTM9zaETj.327abf36ef376bbcfbd7.png",
     "static/media/clip-art-person-34.png": "/CashierHelp/static/media/clip-art-person-34.6bbadc36b3ff2c149877.png",
     "static/media/pkT8daair.png": "/CashierHelp/static/media/pkT8daair.551b02d96a3f6e25e473.png",
+    "static/media/1188279.png": "/CashierHelp/static/media/1188279.d39a6d7e63b1f30fa1e4.png",
+    "static/media/1717187.png": "/CashierHelp/static/media/1717187.4a018fb731e4771d62d1.png",
     "static/media/8TEjrK7jc.png": "/CashierHelp/static/media/8TEjrK7jc.59a152647d3f39083675.png",
     "static/media/8i68RAjLT.png": "/CashierHelp/static/media/8i68RAjLT.efce8827323b357d2d09.png",
     "static/media/6Big8Gjc8.png": "/CashierHelp/static/media/6Big8Gjc8.459ea631658261f325c2.png",
@@ -18,19 +20,25 @@
     "static/media/rijGg4BRT.png": "/CashierHelp/static/media/rijGg4BRT.5bf940a4d1eaa28735a0.png",
     "static/media/BziXp9BcB.png": "/CashierHelp/static/media/BziXp9BcB.212cdd33d34938ebc852.png",
     "static/media/yikAg4BbT.png": "/CashierHelp/static/media/yikAg4BbT.3948b6aac044eb80a83c.png",
+    "static/media/SkateBoardAfricanKid.png": "/CashierHelp/static/media/SkateBoardAfricanKid.75f417fa88cd829170eb.png",
+    "static/media/pinkdresslady.png": "/CashierHelp/static/media/pinkdresslady.ce03233cde2e93ffff66.png",
+    "static/media/clip-art-person-20.png": "/CashierHelp/static/media/clip-art-person-20.cd38fe9bdd70d698c54f.png",
     "static/media/failure-wrong-action.wav": "/CashierHelp/static/media/failure-wrong-action.a4c7ddecf6322ceb44d6.wav",
+    "static/media/255398.png": "/CashierHelp/static/media/255398.60d8082bf42271f83338.png",
     "static/media/clip-art-person-14.png": "/CashierHelp/static/media/clip-art-person-14.cdcd9eb89c9fde1139eb.png",
+    "static/media/1188335.png": "/CashierHelp/static/media/1188335.cce5c1c017866a2cbfc9.png",
     "static/media/clip-art-person-13.png": "/CashierHelp/static/media/clip-art-person-13.819d35ce49ffc1f80876.png",
+    "static/media/1717267.png": "/CashierHelp/static/media/1717267.0eb3f6480aac57feeb32.png",
     "static/media/kT8neGLnc.png": "/CashierHelp/static/media/kT8neGLnc.940fb3d7901b109e23c9.png",
     "static/media/logo.svg": "/CashierHelp/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/CashierHelp/index.html",
     "main.725f1d1c.css.map": "/CashierHelp/static/css/main.725f1d1c.css.map",
-    "main.51f07ea9.js.map": "/CashierHelp/static/js/main.51f07ea9.js.map",
+    "main.dd67e468.js.map": "/CashierHelp/static/js/main.dd67e468.js.map",
     "845.6bdbe6bd.chunk.js.map": "/CashierHelp/static/js/845.6bdbe6bd.chunk.js.map",
     "787.542ef0e8.chunk.js.map": "/CashierHelp/static/js/787.542ef0e8.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.725f1d1c.css",
-    "static/js/main.51f07ea9.js"
+    "static/js/main.dd67e468.js"
   ]
 }
