@@ -3,7 +3,7 @@ import Coin from "./coin";
 function PracticeEight() {
     return(
         <>
-        <div style={{margin: '20px'}}>
+        <div style={{margin: '20px', textAlign: 'left'}}>
         Here's another example! This time, Susie wants to give $10 for a slice of pizza that costs $3.46!
         </div>
         <div style = {{display: 'flex', alignItems: 'center', justifyContent: 'center'}}>

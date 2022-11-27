@@ -3,7 +3,7 @@ import Coin from "./coin";
 function SecondPracticeEight() {
     return(
         <>
-        <div style={{margin: '20px'}}>
+        <div style={{margin: '20px', textAlign: 'left'}}>
         Now that our change is in terms of dollars, start counting in dollars! Add in $1 to complete this transaction!
         </div>
         <div>4.00</div>
@@ -17,7 +17,7 @@ function SecondPracticeEight() {
         This costs $3.31.
         </div>
         </div>
-        <img src={require('./images/clip-art-person-14.png')} height = {200} style = {{margin: '10px'}}></img>
+        <img src={require('./images/clip-art-person-20.png')} height = {200} style = {{margin: '10px'}}></img>
         <div className="bubble">
         <div style={{margin: '20px'}}>
         Here's $5.00.

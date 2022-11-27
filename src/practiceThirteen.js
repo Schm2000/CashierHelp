@@ -3,6 +3,7 @@ import Coin from "./coin";
 function PracticeThirteen() {
     return(
         <>
+        <div style={{textAlign: 'left'}}>
         <div style={{margin: '20px'}}>
         To recap this method:
         </div>
@@ -38,6 +39,7 @@ function PracticeThirteen() {
         </div>
         <div style={{margin: '20px'}}>
         And that's the method! It's time for some hands-on training!
+        </div>
         </div>
         <div style={{display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '5px'}}>
             <Coin value={100}/>

@@ -3,13 +3,13 @@ import Coin from "./coin";
 function PracticeEleven() {
     return(
         <>
-        <div style={{margin: '20px'}}>
-        Finally, we subtract 6 cents from $6.60 to get $6.54. So, we need to count $6.54 worth of change for Susie.
+        <div style={{margin: '20px', textAlign: 'left'}}>
+        Finally, subtract 9-3 = 6, which results in 10-3.46 = 6.54. So, we need to count $6.54 worth of change for Susie.
         </div>
-        <div>6.60</div>
-        <div>-0.06</div>
+        <div>10.00</div>
+        <div>-3.46</div>
         <div>----</div>
-        <div>6.54</div>
+        <div> 6.54</div>
         <div style = {{display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
         <img src={require('./images/8i68RAjLT.png')} height = {150} style = {{margin: '10px'}}></img>
         <div className="bubble">

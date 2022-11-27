@@ -3,7 +3,7 @@ import Coin from "./coin";
 function SecondPracticeTen() {
     return(
         <>
-        <div style={{margin: '20px'}}>
+        <div style={{margin: '20px', textAlign: 'left'}}>
         In this case, we don't have a nice round number to count up to. So, we must get the difference of the cents to be a multiple of 5. Since 68-32=36, we must add one cent so that we have a remaining 35 cent difference.
         </div>
         <div>3.32</div>
@@ -17,7 +17,7 @@ function SecondPracticeTen() {
         This costs $3.32.
         </div>
         </div>
-        <img src={require('./images/clip-art-person-34.png')} height = {200} style = {{margin: '10px'}}></img>
+        <img src={require('./images/pinkdresslady.png')} height = {200} style = {{margin: '10px'}}></img>
         <div className="bubble">
         <div style={{margin: '20px'}}>
         Here's $10.68.

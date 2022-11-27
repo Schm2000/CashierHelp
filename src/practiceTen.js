@@ -3,13 +3,13 @@ import Coin from "./coin";
 function PracticeTen() {
     return(
         <>
-        <div style={{margin: '20px'}}>
-        We then subtract 40 cents from $7 to get $6.60!
+        <div style={{margin: '20px', textAlign: 'left'}}>
+        Since we carried over a 1 from 100, we subtract 1 to get 99. Next, subtract 9-4 = 5.
         </div>
-        <div>7.00</div>
-        <div>-0.40</div>
+        <div>10.00</div>
+        <div>-3.46</div>
         <div>----</div>
-        <div>6.60</div>
+        <div> ?.54</div>
         <div style = {{display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
         <img src={require('./images/8i68RAjLT.png')} height = {150} style = {{margin: '10px'}}></img>
         <div className="bubble">

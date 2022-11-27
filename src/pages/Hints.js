@@ -127,16 +127,16 @@ function Hints() {
         {setPageTwo == 16 ? <ClockFour/> : null}
         {setOne ? <ClockTwo/> : null}
         {setThree ? <ClockFive/> : null}
-        {setPage < 14 && setPage > 0 ? <button className="Time-button" style = {{margin: '10px'
-        }} onClick={() => changePage(setPage + 1)}>Next</button> : null}
         {setPage > 1 ? <button className="Time-button" style = {{margin: '10px'
         }} onClick={() => changePage(setPage - 1)}>Previous</button> : null}
-        {setPageTwo < 16 && setPageTwo > 0 ? <button className="Time-button" style = {{margin: '10px'
-        }} onClick={() => changePageTwo(setPageTwo + 1)}>Next</button> : null}
         {setPageTwo > 1 ? <button className="Time-button" style = {{margin: '10px'
         }} onClick={() => changePageTwo(setPageTwo - 1)}>Previous</button> : null}
         {setTwo ? null: <button className="Time-button" style = {{margin: '10px'
-        }} onClick={() => deactivateSimulator()}>Back</button>}
+        }} onClick={() => deactivateSimulator()}>Practice Menu</button>}
+        {setPage < 14 && setPage > 0 ? <button className="Time-button" style = {{margin: '10px'
+        }} onClick={() => changePage(setPage + 1)}>Next</button> : null}
+        {setPageTwo < 16 && setPageTwo > 0 ? <button className="Time-button" style = {{margin: '10px'
+        }} onClick={() => changePageTwo(setPageTwo + 1)}>Next</button> : null}
         </div>
         </>
     );

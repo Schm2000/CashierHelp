@@ -3,7 +3,7 @@ import Coin from "./coin";
 function SecondPracticeThirteen() {
     return(
         <>
-        <div style={{margin: '20px'}}>
+        <div style={{margin: '20px', textAlign: 'left'}}>
         Since our dollar difference is seven dollars, we start by adding up 2 dollars from 1 dollar bills to get a $5 difference.
         </div>
         <div>3.68</div>
@@ -17,7 +17,7 @@ function SecondPracticeThirteen() {
         This costs $3.32.
         </div>
         </div>
-        <img src={require('./images/clip-art-person-34.png')} height = {200} style = {{margin: '10px'}}></img>
+        <img src={require('./images/pinkdresslady.png')} height = {200} style = {{margin: '10px'}}></img>
         <div className="bubble">
         <div style={{margin: '20px'}}>
         Here's $10.68.

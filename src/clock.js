@@ -24,8 +24,10 @@ function Clock() {
     const [timeMax, setTimeMax] = useState("No input detected.");
     const [showOne, setShowOne] = useState(true);
     const [showTwo, setShowTwo] = useState(false);
-    const [personImage, setPersonImage] = useState('0');
+    const [showThree, setShowThree] = useState(true);
+    const [personImage, setPersonImage] = useState(0);
     const [foodImage, setFoodImage] = useState('0');
+    const [showTimer, setShowTimer] = useState(false);
     let interval;
     const [play] = useSound(successBell);
     const [playWrong] = useSound(failureSound);
@@ -46,47 +48,10 @@ function Clock() {
         }
     }, [count]);
     const imageChange = () => {
-        let randomPerson = Math.floor(Math.random()*3);
-        if (randomPerson == 0){
-            setPersonImage('0')
-        }
-        else if (randomPerson == 1){
-            setPersonImage('1')
-        }
-        else {
-            setPersonImage('2')
-        }
+        let randomPerson = Math.floor(Math.random()*11);
+        setPersonImage(randomPerson)
         let randomFood = Math.floor(Math.random()*10);
-        if (randomFood == 0){
-            setFoodImage('0')
-        }
-        else if (randomFood == 1){
-            setFoodImage('1')
-        }
-        else if (randomFood == 2){
-            setFoodImage('2')
-        }
-        else if (randomFood == 3){
-            setFoodImage('3')
-        }
-        else if (randomFood == 4){
-            setFoodImage('4')
-        }
-        else if (randomFood == 5){
-            setFoodImage('5')
-        }
-        else if (randomFood == 6){
-            setFoodImage('6')
-        }
-        else if (randomFood == 7){
-            setFoodImage('7')
-        }
-        else if (randomFood == 8){
-            setFoodImage('8')
-        }
-        else {
-            setFoodImage('9')
-        }
+        setFoodImage(randomFood)
     }
     const onAndOffSwitch = countPass => {
         if (countPass === false){
@@ -103,6 +68,9 @@ function Clock() {
             getFinalNum("N/A")
             setShowOne(false)
             setShowTwo(false)
+            if (showTimer == true){
+                setShowThree(false)
+            }
             imageChange()
             playStart()
         }
@@ -120,6 +88,7 @@ function Clock() {
             getNumCorrect("N/A")
             setShowOne(true)
             setShowTwo(true)
+            setShowThree(true)
             playEnd()
         }
     }
@@ -133,6 +102,9 @@ function Clock() {
         if (countPass == false){
         setDiff(value)
         }
+    }
+    const timerSwitch = value => {
+        setShowTimer(value)
     }
     const generateNumber = () => {
         let valDiff = 0
@@ -189,6 +161,22 @@ function Clock() {
         }
     }
     }
+    const handleTimeChangeTwo = value => {
+        if (countPass === false){
+            if (value == 60){
+                setTimeMax(60)
+            }
+            else if (value == 300){
+                setTimeMax(300)
+            }
+            else if (value == 600){
+                setTimeMax(600)
+            }
+            else{
+                setTimeMax("Max Time set off.")
+            }
+    }
+    }
     const checkCorrect = () => {
         if (changeTotal != "N/A"){
         if (changeTotal == genNumber){
@@ -243,31 +231,39 @@ function Clock() {
                 Start/Stop
             </button>
         </div>
-        <div style = {showTwo ? {margin: '20px'} : {display: 'none'}}>
+        <div style = {showTwo ? {margin: '20px', fontWeight: 'bold', fontSize: '40px'} : {display: 'none'}}>
             You have completed {finalNumCorrect} transactions in {finalTime} seconds!
         </div>
-        <div className="Timer" style = {showOne ? {display: 'none'} : {}}>
+        <div className="Timer" style = {showThree ? {display: 'none'} : {}}>
             Timer: {count}
         </div>
         <div style = {showOne ? {display:'none'} : {display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
-        <img src={require('./images/6Big8Gjc8.png')} height = {150} style = {foodImage == '0' ? {margin: '10px'} : {display: 'none'}}></img>
-        <img src={require('./images/8i68RAjLT.png')} height = {150} style = {foodImage == '1' ? {margin: '10px'} : {display: 'none'}}></img>
-        <img src={require('./images/8TEjrK7jc.png')} height = {150} style = {foodImage == '2' ? {margin: '10px'} : {display: 'none'}}></img>
-        <img src={require('./images/76TrKyGiK.png')} height = {150} style = {foodImage == '3' ? {margin: '10px'} : {display: 'none'}}></img>
-        <img src={require('./images/BziXp9BcB.png')} height = {150} style = {foodImage == '4' ? {margin: '10px'} : {display: 'none'}}></img>
-        <img src={require('./images/kT8neGLnc.png')} height = {150} style = {foodImage == '5' ? {margin: '10px'} : {display: 'none'}}></img>
-        <img src={require('./images/kTM9zaETj.png')} height = {150} style = {foodImage == '6' ? {margin: '10px'} : {display: 'none'}}></img>
-        <img src={require('./images/pkT8daair.png')} height = {150} style = {foodImage == '7' ? {margin: '10px'} : {display: 'none'}}></img>
-        <img src={require('./images/rijGg4BRT.png')} height = {150} style = {foodImage == '8' ? {margin: '10px'} : {display: 'none'}}></img>
-        <img src={require('./images/yikAg4BbT.png')} height = {150} style = {foodImage == '9' ? {margin: '10px'} : {display: 'none'}}></img>
+        <img src={require('./images/6Big8Gjc8.png')} height = {150} style = {foodImage == 0 ? {margin: '10px'} : {display: 'none'}}></img>
+        <img src={require('./images/8i68RAjLT.png')} height = {150} style = {foodImage == 1 ? {margin: '10px'} : {display: 'none'}}></img>
+        <img src={require('./images/8TEjrK7jc.png')} height = {150} style = {foodImage == 2 ? {margin: '10px'} : {display: 'none'}}></img>
+        <img src={require('./images/76TrKyGiK.png')} height = {150} style = {foodImage == 3 ? {margin: '10px'} : {display: 'none'}}></img>
+        <img src={require('./images/BziXp9BcB.png')} height = {150} style = {foodImage == 4 ? {margin: '10px'} : {display: 'none'}}></img>
+        <img src={require('./images/kT8neGLnc.png')} height = {150} style = {foodImage == 5 ? {margin: '10px'} : {display: 'none'}}></img>
+        <img src={require('./images/kTM9zaETj.png')} height = {150} style = {foodImage == 6 ? {margin: '10px'} : {display: 'none'}}></img>
+        <img src={require('./images/pkT8daair.png')} height = {150} style = {foodImage == 7 ? {margin: '10px'} : {display: 'none'}}></img>
+        <img src={require('./images/rijGg4BRT.png')} height = {150} style = {foodImage == 8 ? {margin: '10px'} : {display: 'none'}}></img>
+        <img src={require('./images/yikAg4BbT.png')} height = {150} style = {foodImage == 9 || foodImage == 10 ? {margin: '10px'} : {display: 'none'}}></img>
         <div className="bubble">
         <div style = {showOne ? {display: 'none'} : {margin: '10px'}}>
             This costs ${genNumberCost}
         </div>
         </div>
-            <img src={require('./images/clip-art-person-13.png')} height = {200} style = {personImage == '0' ? {margin: '10px'} : {display: 'none'}}></img>
-            <img src={require('./images/clip-art-person-14.png')} height = {200} style = {personImage == '1' ? {margin: '10px'} : {display: 'none'}}></img>
-            <img src={require('./images/clip-art-person-34.png')} height = {200} style = {personImage == '2' ? {margin: '10px'} : {display: 'none'}}></img>
+            <img src={require('./images/clip-art-person-13.png')} height = {200} style = {personImage == 0 ? {margin: '10px'} : {display: 'none'}}></img>
+            <img src={require('./images/clip-art-person-14.png')} height = {200} style = {personImage == 1 ? {margin: '10px'} : {display: 'none'}}></img>
+            <img src={require('./images/clip-art-person-34.png')} height = {200} style = {personImage == 2 ? {margin: '10px'} : {display: 'none'}}></img>
+            <img src={require('./images/255398.png')} height = {200} style = {personImage == 3 ? {margin: '10px'} : {display: 'none'}}></img>
+            <img src={require('./images/1188279.png')} height = {200} style = {personImage == 4 ? {margin: '10px'} : {display: 'none'}}></img>
+            <img src={require('./images/1188335.png')} height = {200} style = {personImage == 5 ? {margin: '10px'} : {display: 'none'}}></img>
+            <img src={require('./images/1717187.png')} height = {200} style = {personImage == 6 ? {margin: '10px'} : {display: 'none'}}></img>
+            <img src={require('./images/1717267.png')} height = {200} style = {personImage == 7 ? {margin: '10px'} : {display: 'none'}}></img>
+            <img src={require('./images/clip-art-person-20.png')} height = {200} style = {personImage == 8 ? {margin: '10px'} : {display: 'none'}}></img>
+            <img src={require('./images/pinkdresslady.png')} height = {200} style = {personImage == 9 ? {margin: '10px'} : {display: 'none'}}></img>
+            <img src={require('./images/SkateBoardAfricanKid.png')} height = {200} style = {personImage == 10 || personImage == 11 ? {margin: '10px'} : {display: 'none'}}></img>
         <div className="bubble">
         <div style = {showOne ? {display: 'none'} : {margin: '10px'}}>
             Here's ${genNumberCostDiff}
@@ -337,14 +333,39 @@ function Clock() {
         </div>
       </form>
         </div>
+        <div style = {showOne ? {} : {display: 'none'}}>
+            Visible timer?
+        </div>
+        <div style = {showOne ? {margin: '10px'} : {display: 'none'}}>
+        <form>
+        <div>
+          <label>
+            <input type="radio" value={true} checked={showTimer == true} onChange={() => timerSwitch(true)} />
+            Yes
+          </label>
+        </div>
+        <div>
+          <label>
+            <input type="radio" value={false} checked={showTimer == false} onChange={() => timerSwitch(false)}/>
+            No
+          </label>
+        </div>
+      </form>
+        </div>
         <div style = {showOne ? {margin: '20px'} : {display: 'none'}}>
             Set Max Number of Transactions: {intervalNum}
         </div>
         <input type = "text" style={showOne ? {marginBottom: '20px'} : {display: 'none'}} onChange= {handleChange}/>
         <div style = {showOne ? {margin: '20px'} : {display: 'none'}}>
-            Set Max Amount of Time: {timeMax}
+            Set Max Amount of Time in seconds: {timeMax}
         </div>
+        <div>
         <input type = "text" style={showOne ? {marginBottom: '20px'} : {display: 'none'}} onChange= {handleTimeChange}/>
+        </div>
+        <button className = "Time-button" style={showOne ? {margin: '5px'} : {display: 'none'}} onClick ={() => handleTimeChangeTwo(0)}> Off </button>
+        <button className = "Time-button" style={showOne ? {margin: '5px'} : {display: 'none'}} onClick ={() => handleTimeChangeTwo(60)}> 1 Minute </button>
+        <button className = "Time-button" style={showOne ? {margin: '5px'} : {display: 'none'}} onClick ={() => handleTimeChangeTwo(300)}> 5 Minutes </button>
+        <button className = "Time-button" style={showOne ? {margin: '5px'} : {display: 'none'}} onClick ={() => handleTimeChangeTwo(600)}> 10 Minutes </button>
         </div>
         </>
     );

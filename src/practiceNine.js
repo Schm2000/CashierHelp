@@ -3,13 +3,13 @@ import Coin from "./coin";
 function PracticeNine() {
     return(
         <>
-        <div style={{margin: '20px'}}>
-        Like before, we start by subtracting 3 dollars from the 10 Susie gives us. This leaves us with $7.
+        <div style={{margin: '20px', textAlign: 'left'}}>
+        Like before, we start by subtracting the last number. We need to carry over a 1, so 10-6 = 4.
         </div>
         <div>10.00</div>
-        <div>-3.00</div>
+        <div>-3.46</div>
         <div>----</div>
-        <div>7.00</div>
+        <div> ?.?4</div>
         <div style = {{display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
         <img src={require('./images/8i68RAjLT.png')} height = {150} style = {{margin: '10px'}}></img>
         <div className="bubble">

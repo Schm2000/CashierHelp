@@ -3,7 +3,7 @@ import Coin from "./coin";
 function SecondPracticeTwelve() {
     return(
         <>
-        <div style={{margin: '20px'}}>
+        <div style={{margin: '20px', textAlign: 'left'}}>
         ...and finally, since our cent difference is a multiple of 25, we use one quarter to match our cent totals. Now all that's left are dollars!
         </div>
         <div>3.43</div>
@@ -17,7 +17,7 @@ function SecondPracticeTwelve() {
         This costs $3.32.
         </div>
         </div>
-        <img src={require('./images/clip-art-person-34.png')} height = {200} style = {{margin: '10px'}}></img>
+        <img src={require('./images/pinkdresslady.png')} height = {200} style = {{margin: '10px'}}></img>
         <div className="bubble">
         <div style={{margin: '20px'}}>
         Here's $10.68.

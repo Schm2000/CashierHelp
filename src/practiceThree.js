@@ -3,7 +3,7 @@ import Coin from "./coin";
 function PracticeThree() {
     return(
         <>
-        <div style={{margin: '20px'}}>
+        <div style={{margin: '20px', textAlign: 'left'}}>
         We'll start with this problem: Steve wants to buy strawberries that cost $5.56, but he gives $6.68.
         </div>
         <div style = {{display: 'flex', alignItems: 'center', justifyContent: 'center'}}>

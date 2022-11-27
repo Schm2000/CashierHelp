@@ -3,7 +3,7 @@ import Coin from "./coin";
 function SecondPracticeSeven() {
     return(
         <>
-        <div style={{margin: '20px'}}>
+        <div style={{margin: '20px', textAlign: 'left'}}>
         Add two quarters to make $4. There's only one last step before we get our total change!
         </div>
         <div>3.50</div>
@@ -17,7 +17,7 @@ function SecondPracticeSeven() {
         This costs $3.31.
         </div>
         </div>
-        <img src={require('./images/clip-art-person-14.png')} height = {200} style = {{margin: '10px'}}></img>
+        <img src={require('./images/clip-art-person-20.png')} height = {200} style = {{margin: '10px'}}></img>
         <div className="bubble">
         <div style={{margin: '20px'}}>
         Here's $5.00.

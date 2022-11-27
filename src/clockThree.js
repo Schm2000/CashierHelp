@@ -20,53 +20,16 @@ function ClockThree() {
     const [showExTwo, setShowExTwo] = useState(true);
     const [showExThree, setShowExThree] = useState(true);
     const [errorVal, setErrorVal] = useState("N/A");
-    const [personImage, setPersonImage] = useState('0');
-    const [foodImage, setFoodImage] = useState('0');
+    const [personImage, setPersonImage] = useState(0);
+    const [foodImage, setFoodImage] = useState(0);
     const [play] = useSound(successBell);
     const [playWrong] = useSound(failureSound);
     const [playEnd] = useSound(stopSound);
     const imageChange = () => {
-        let randomPerson = Math.floor(Math.random()*3);
-        if (randomPerson == 0){
-            setPersonImage('0')
-        }
-        else if (randomPerson == 1){
-            setPersonImage('1')
-        }
-        else {
-            setPersonImage('2')
-        }
+        let randomPerson = Math.floor(Math.random()*11);
+        setPersonImage(randomPerson)
         let randomFood = Math.floor(Math.random()*10);
-        if (randomFood == 0){
-            setFoodImage('0')
-        }
-        else if (randomFood == 1){
-            setFoodImage('1')
-        }
-        else if (randomFood == 2){
-            setFoodImage('2')
-        }
-        else if (randomFood == 3){
-            setFoodImage('3')
-        }
-        else if (randomFood == 4){
-            setFoodImage('4')
-        }
-        else if (randomFood == 5){
-            setFoodImage('5')
-        }
-        else if (randomFood == 6){
-            setFoodImage('6')
-        }
-        else if (randomFood == 7){
-            setFoodImage('7')
-        }
-        else if (randomFood == 8){
-            setFoodImage('8')
-        }
-        else {
-            setFoodImage('9')
-        }
+        setFoodImage(randomFood)
     }
     const addChange = value => {
         if (changeTotal != "N/A"){
@@ -326,28 +289,36 @@ function ClockThree() {
     return(
         <>
         <div onKeyDown={(e) => onKeyPress(e)}>
-        <div style = {showSix ? {display: 'none'} : {margin: '10px'}}>
+        <div style = {showSix ? {display: 'none'} : {margin: '10px', textAlign: 'left'}}>
             Go ahead and try some examples on your own!
         </div>
         <div style = {showSix ? {display: 'none'} : {display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
-        <img src={require('./images/6Big8Gjc8.png')} height = {150} style = {foodImage == '0' ? {margin: '10px'} : {display: 'none'}}></img>
-        <img src={require('./images/8i68RAjLT.png')} height = {150} style = {foodImage == '1' ? {margin: '10px'} : {display: 'none'}}></img>
-        <img src={require('./images/8TEjrK7jc.png')} height = {150} style = {foodImage == '2' ? {margin: '10px'} : {display: 'none'}}></img>
-        <img src={require('./images/76TrKyGiK.png')} height = {150} style = {foodImage == '3' ? {margin: '10px'} : {display: 'none'}}></img>
-        <img src={require('./images/BziXp9BcB.png')} height = {150} style = {foodImage == '4' ? {margin: '10px'} : {display: 'none'}}></img>
-        <img src={require('./images/kT8neGLnc.png')} height = {150} style = {foodImage == '5' ? {margin: '10px'} : {display: 'none'}}></img>
-        <img src={require('./images/kTM9zaETj.png')} height = {150} style = {foodImage == '6' ? {margin: '10px'} : {display: 'none'}}></img>
-        <img src={require('./images/pkT8daair.png')} height = {150} style = {foodImage == '7' ? {margin: '10px'} : {display: 'none'}}></img>
-        <img src={require('./images/rijGg4BRT.png')} height = {150} style = {foodImage == '8' ? {margin: '10px'} : {display: 'none'}}></img>
-        <img src={require('./images/yikAg4BbT.png')} height = {150} style = {foodImage == '9' ? {margin: '10px'} : {display: 'none'}}></img>
+        <img src={require('./images/6Big8Gjc8.png')} height = {150} style = {foodImage == 0 ? {margin: '10px'} : {display: 'none'}}></img>
+        <img src={require('./images/8i68RAjLT.png')} height = {150} style = {foodImage == 1 ? {margin: '10px'} : {display: 'none'}}></img>
+        <img src={require('./images/8TEjrK7jc.png')} height = {150} style = {foodImage == 2 ? {margin: '10px'} : {display: 'none'}}></img>
+        <img src={require('./images/76TrKyGiK.png')} height = {150} style = {foodImage == 3 ? {margin: '10px'} : {display: 'none'}}></img>
+        <img src={require('./images/BziXp9BcB.png')} height = {150} style = {foodImage == 4 ? {margin: '10px'} : {display: 'none'}}></img>
+        <img src={require('./images/kT8neGLnc.png')} height = {150} style = {foodImage == 5 ? {margin: '10px'} : {display: 'none'}}></img>
+        <img src={require('./images/kTM9zaETj.png')} height = {150} style = {foodImage == 6 ? {margin: '10px'} : {display: 'none'}}></img>
+        <img src={require('./images/pkT8daair.png')} height = {150} style = {foodImage == 7 ? {margin: '10px'} : {display: 'none'}}></img>
+        <img src={require('./images/rijGg4BRT.png')} height = {150} style = {foodImage == 8 ? {margin: '10px'} : {display: 'none'}}></img>
+        <img src={require('./images/yikAg4BbT.png')} height = {150} style = {foodImage == 9 || foodImage == 10 ? {margin: '10px'} : {display: 'none'}}></img>
         <div className="bubble">
         <div style = {{margin: '10px'}}>
             This costs ${genNumberCost.toFixed(2)}
         </div>
         </div>
-            <img src={require('./images/clip-art-person-13.png')} height = {200} style = {personImage == '0' ? {margin: '10px'} : {display: 'none'}}></img>
-            <img src={require('./images/clip-art-person-14.png')} height = {200} style = {personImage == '1' ? {margin: '10px'} : {display: 'none'}}></img>
-            <img src={require('./images/clip-art-person-34.png')} height = {200} style = {personImage == '2' ? {margin: '10px'} : {display: 'none'}}></img>
+        <img src={require('./images/clip-art-person-13.png')} height = {200} style = {personImage == 0 ? {margin: '10px'} : {display: 'none'}}></img>
+            <img src={require('./images/clip-art-person-14.png')} height = {200} style = {personImage == 1 ? {margin: '10px'} : {display: 'none'}}></img>
+            <img src={require('./images/clip-art-person-34.png')} height = {200} style = {personImage == 2 ? {margin: '10px'} : {display: 'none'}}></img>
+            <img src={require('./images/255398.png')} height = {200} style = {personImage == 3 ? {margin: '10px'} : {display: 'none'}}></img>
+            <img src={require('./images/1188279.png')} height = {200} style = {personImage == 4 ? {margin: '10px'} : {display: 'none'}}></img>
+            <img src={require('./images/1188335.png')} height = {200} style = {personImage == 5 ? {margin: '10px'} : {display: 'none'}}></img>
+            <img src={require('./images/1717187.png')} height = {200} style = {personImage == 6 ? {margin: '10px'} : {display: 'none'}}></img>
+            <img src={require('./images/1717267.png')} height = {200} style = {personImage == 7 ? {margin: '10px'} : {display: 'none'}}></img>
+            <img src={require('./images/clip-art-person-20.png')} height = {200} style = {personImage == 8 ? {margin: '10px'} : {display: 'none'}}></img>
+            <img src={require('./images/pinkdresslady.png')} height = {200} style = {personImage == 9 ? {margin: '10px'} : {display: 'none'}}></img>
+            <img src={require('./images/SkateBoardAfricanKid.png')} height = {200} style = {personImage == 10 || personImage == 11 ? {margin: '10px'} : {display: 'none'}}></img>
         <div className="bubble">
         <div style = {{margin: '10px'}}>
             Here's ${genNumberCostDiff.toFixed(2)}
@@ -355,59 +326,23 @@ function ClockThree() {
         </div>
         </div>
         <div style = {showExOne ? {display: 'none'}:{}}>$7.79</div>
-        <div style = {showExOne ? {display: 'none'}:{}}>-$5.00</div>
+        <div style = {showExOne ? {display: 'none'}:{}}>-$5.58</div>
         <div style = {showExOne ? {display: 'none'}:{}}>----</div>
-        <div style={showExOne ? {display:'none'}:{display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
-        <div>Type in answer here:  </div>
-        <input style = {showExOne ? {display: 'none'}:{marginLeft: '10px'}}></input>
-        </div>
-        <div style = {showExOne ? {display: 'none'}:{}}>-$0.50</div>
-        <div style = {showExOne ? {display: 'none'}:{}}>----</div>
-        <div style={showExOne ? {display:'none'}:{display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
-        <div>Type in answer here:  </div>
-        <input style = {showExOne ? {display: 'none'}:{marginLeft: '10px'}}></input>
-        </div>
-        <div style = {showExOne ? {display: 'none'}:{}}>-$0.08</div>
-        <div style = {showExOne ? {display: 'none'}:{}}>----</div>
-        <div style={showExOne ? {display:'none'}:{display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
+        <div style={showExOne ? {display:'none'}:{display: 'flex', alignItems: 'center', justifyContent: 'center', marginRight: '230px'}}>
         <div>Type in answer here:  </div>
         <input style = {showExOne ? {display: 'none'}:{marginLeft: '10px'}}></input>
         </div>
         <div style = {showExTwo ? {display: 'none'}:{}}>$10.00</div>
-        <div style = {showExTwo ? {display: 'none'}:{}}>-$2.00</div>
+        <div style = {showExTwo ? {display: 'none'}:{}}>-$2.46</div>
         <div style = {showExTwo ? {display: 'none'}:{}}>----</div>
-        <div style={showExTwo ? {display:'none'}:{display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
-        <div>Type in answer here:  </div>
-        <input style = {showExTwo ? {display: 'none'}:{marginLeft: '10px'}}></input>
-        </div>
-        <div style = {showExTwo ? {display: 'none'}:{}}>-$0.40</div>
-        <div style = {showExTwo ? {display: 'none'}:{}}>----</div>
-        <div style={showExTwo ? {display:'none'}:{display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
-        <div>Type in answer here:  </div>
-        <input style = {showExTwo ? {display: 'none'}:{marginLeft: '10px'}}></input>
-        </div>
-        <div style = {showExTwo ? {display: 'none'}:{}}>-$0.06</div>
-        <div style = {showExTwo ? {display: 'none'}:{}}>----</div>
-        <div style={showExTwo ? {display:'none'}:{display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
+        <div style={showExTwo ? {display:'none'}:{display: 'flex', alignItems: 'center', justifyContent: 'center', marginRight: '230px'}}>
         <div>Type in answer here:  </div>
         <input style = {showExTwo ? {display: 'none'}:{marginLeft: '10px'}}></input>
         </div>
         <div style = {showExThree ? {display: 'none'}:{}}>$5.20</div>
-        <div style = {showExThree ? {display: 'none'}:{}}>-$3.00</div>
+        <div style = {showExThree ? {display: 'none'}:{}}>-$3.23</div>
         <div style = {showExThree ? {display: 'none'}:{}}>----</div>
-        <div style={showExThree ? {display:'none'}:{display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
-        <div>Type in answer here:  </div>
-        <input style = {showExThree ? {display: 'none'}:{marginLeft: '10px'}}></input>
-        </div>
-        <div style = {showExThree ? {display: 'none'}:{}}>-$0.20</div>
-        <div style = {showExThree ? {display: 'none'}:{}}>----</div>
-        <div style={showExThree ? {display:'none'}:{display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
-        <div>Type in answer here:  </div>
-        <input style = {showExThree ? {display: 'none'}:{marginLeft: '10px'}}></input>
-        </div>
-        <div style = {showExThree ? {display: 'none'}:{}}>-$0.03</div>
-        <div style = {showExThree ? {display: 'none'}:{}}>----</div>
-        <div style={showExThree ? {display:'none'}:{display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
+        <div style={showExThree ? {display:'none'}:{display: 'flex', alignItems: 'center', justifyContent: 'center', marginRight: '230px'}}>
         <div>Type in answer here:  </div>
         <input style = {showExThree ? {display: 'none'}:{marginLeft: '10px'}}></input>
         </div>

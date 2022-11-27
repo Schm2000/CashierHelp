@@ -3,7 +3,7 @@ import Coin from "./coin";
 function SecondPracticeEleven() {
     return(
         <>
-        <div style={{margin: '20px'}}>
+        <div style={{margin: '20px', textAlign: 'left'}}>
         Our cent difference remaining is 35. Next, we add a dime to lower this difference to 25 cents...
         </div>
         <div>3.33</div>
@@ -17,7 +17,7 @@ function SecondPracticeEleven() {
         This costs $3.32.
         </div>
         </div>
-        <img src={require('./images/clip-art-person-34.png')} height = {200} style = {{margin: '10px'}}></img>
+        <img src={require('./images/pinkdresslady.png')} height = {200} style = {{margin: '10px'}}></img>
         <div className="bubble">
         <div style={{margin: '20px'}}>
         Here's $10.68.

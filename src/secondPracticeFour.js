@@ -3,7 +3,7 @@ import Coin from "./coin";
 function SecondPracticeFour() {
     return(
         <>
-        <div style={{margin: '20px'}}>
+        <div style={{margin: '20px', textAlign: 'left'}}>
         Using the additive method, we will count up from $3.31 to $5.00 to get our change. First, add up 4 pennies:
         </div>
         <div>3.31</div>
@@ -17,7 +17,7 @@ function SecondPracticeFour() {
         This costs $3.31.
         </div>
         </div>
-        <img src={require('./images/clip-art-person-14.png')} height = {200} style = {{margin: '10px'}}></img>
+        <img src={require('./images/clip-art-person-20.png')} height = {200} style = {{margin: '10px'}}></img>
         <div className="bubble">
         <div style={{margin: '20px'}}>
         Here's $5.00.

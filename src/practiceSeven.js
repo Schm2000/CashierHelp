@@ -3,7 +3,7 @@ import Coin from "./coin";
 function PracticeSeven() {
     return(
         <>
-        <div style={{margin: '20px'}}>
+        <div style={{margin: '20px', textAlign: 'left'}}>
         Since we need to give back $1.12 in change, we start with giving back $1 by selecting the $1 bill once.
         </div>
         <div style = {{display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
@@ -34,7 +34,7 @@ function PracticeSeven() {
             <Coin value={1}/>
         </div>
         <div>Amount of Change Gathered: $1.00</div>
-        <div>Then we give back ten cents by selecting the dime:</div>
+        <div style={{textAlign: 'left'}}>Then we give back ten cents by selecting the dime:</div>
         <div style={{display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '5px'}}>
             <Coin value={100}/>
             <Coin value={500}/>
@@ -48,7 +48,7 @@ function PracticeSeven() {
             <Coin value={1}/>
         </div>
         <div>Amount of Change Gathered: $1.10</div>
-        <div>Finally, we give 2 cents by selecting the penny twice:</div>
+        <div style={{textAlign: 'left'}}>Finally, we give 2 cents by selecting the penny twice:</div>
         <div style={{display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '5px'}}>
             <Coin value={100}/>
             <Coin value={500}/>
@@ -62,7 +62,7 @@ function PracticeSeven() {
             <Coin value={3}/>
         </div>
         <div>Amount of Change Gathered: $1.12</div>
-        <div>We've now collected the right amount of change!</div>
+        <div style={{textAlign: 'left'}}>We've now collected the right amount of change!</div>
         </>
     );
 }

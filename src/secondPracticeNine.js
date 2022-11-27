@@ -3,8 +3,8 @@ import Coin from "./coin";
 function SecondPracticeNine() {
     return(
         <>
-        <div style={{margin: '20px'}}>
-        Here's another example. Susie wants to buy a hot dog, which costs $3.32. She gives $10.68 in exchange.
+        <div style={{margin: '20px', textAlign: 'left'}}>
+        Here's another example. Susan wants to buy a hot dog, which costs $3.32. She gives $10.68 in exchange.
         </div>
         <div style = {{display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
         <img src={require('./images/rijGg4BRT.png')} height = {150} style = {{margin: '10px'}}></img>
@@ -13,7 +13,7 @@ function SecondPracticeNine() {
         This costs $3.32.
         </div>
         </div>
-        <img src={require('./images/clip-art-person-34.png')} height = {200} style = {{margin: '10px'}}></img>
+        <img src={require('./images/pinkdresslady.png')} height = {200} style = {{margin: '10px'}}></img>
         <div className="bubble">
         <div style={{margin: '20px'}}>
         Here's $10.68.

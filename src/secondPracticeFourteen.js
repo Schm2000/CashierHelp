@@ -3,7 +3,7 @@ import Coin from "./coin";
 function SecondPracticeThirteen() {
     return(
         <>
-        <div style={{margin: '20px'}}>
+        <div style={{margin: '20px', textAlign: 'left'}}>
         Finally, since we have a $5 difference, add up one final $5 bill to complete the transaction!
         </div>
         <div>5.68</div>
@@ -17,7 +17,7 @@ function SecondPracticeThirteen() {
         This costs $3.32.
         </div>
         </div>
-        <img src={require('./images/clip-art-person-34.png')} height = {200} style = {{margin: '10px'}}></img>
+        <img src={require('./images/pinkdresslady.png')} height = {200} style = {{margin: '10px'}}></img>
         <div className="bubble">
         <div style={{margin: '20px'}}>
         Here's $10.68.

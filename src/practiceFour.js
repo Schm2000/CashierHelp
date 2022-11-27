@@ -3,13 +3,13 @@ import Coin from "./coin";
 function PracticeFour() {
     return(
         <>
-        <div style={{margin: '20px'}}>
-        The trick is to subtract from the left to right. First, subtract 5 dollars from $6.68 as such:
+        <div style={{margin: '20px', textAlign: 'left'}}>
+        The trick is to subtract from the right to left. First, perform 8-6 to get 2:
         </div>
-        <div>6.68</div>
-        <div>-5.00</div>
+        <div> 6.68</div>
+        <div>-5.56</div>
         <div>----</div>
-        <div>1.68</div>
+        <div> ?.?2</div>
         <div style = {{display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
         <img src={require('./images/kT8neGLnc.png')} height = {150} style = {{margin: '10px'}}></img>
         <div className="bubble">

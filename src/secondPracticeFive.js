@@ -3,7 +3,7 @@ import Coin from "./coin";
 function SecondPracticeFive() {
     return(
         <>
-        <div style={{margin: '20px'}}>
+        <div style={{margin: '20px', textAlign: 'left'}}>
         Now that our sum is in terms of 5s, we will now add change to make it in terms of 25s. First add a nickel/5 cents to make the difference 60 cents...
         </div>
         <div>3.35</div>
@@ -17,7 +17,7 @@ function SecondPracticeFive() {
         This costs $3.31.
         </div>
         </div>
-        <img src={require('./images/clip-art-person-14.png')} height = {200} style = {{margin: '10px'}}></img>
+        <img src={require('./images/clip-art-person-20.png')} height = {200} style = {{margin: '10px'}}></img>
         <div className="bubble">
         <div style={{margin: '20px'}}>
         Here's $5.00.

@@ -3,13 +3,13 @@ import Coin from "./coin";
 function PracticeFive() {
     return(
         <>
-        <div style={{margin: '20px'}}>
-        Then, subtract 50 cents from the remaining $1.68 to get $1.18.
+        <div style={{margin: '20px', textAlign: 'left'}}>
+        Then, subtract 6-5 to get 1.
         </div>
-        <div>1.68</div>
-        <div>-0.50</div>
+        <div> 6.68</div>
+        <div>-5.56</div>
         <div>----</div>
-        <div>1.18</div>
+        <div> ?.12</div>
         <div style = {{display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
         <img src={require('./images/kT8neGLnc.png')} height = {150} style = {{margin: '10px'}}></img>
         <div className="bubble">

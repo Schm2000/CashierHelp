@@ -3,7 +3,7 @@ import Coin from "./coin";
 function SecondPracticeThree() {
     return(
         <>
-        <div style={{margin: '20px'}}>
+        <div style={{margin: '20px', textAlign: 'left'}}>
         We'll start with this problem: Roger wants to buy strawberries that cost $3.31, but he gives $5.00.
         </div>
         <div style = {{display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
@@ -13,7 +13,7 @@ function SecondPracticeThree() {
         This costs $3.31.
         </div>
         </div>
-        <img src={require('./images/clip-art-person-14.png')} height = {200} style = {{margin: '10px'}}></img>
+        <img src={require('./images/clip-art-person-20.png')} height = {200} style = {{margin: '10px'}}></img>
         <div className="bubble">
         <div style={{margin: '20px'}}>
         Here's $5.00.

@@ -3,6 +3,7 @@ import Coin from "./coin";
 function PracticeFourteen() {
     return(
         <>
+        <div style={{textAlign: 'left'}}>
         <div style={{margin: '20px'}}>
         So to recap:
         </div>
@@ -20,6 +21,7 @@ function PracticeFourteen() {
         </div>
         <div style={{margin: '20px'}}>
             - When counting cents, start by counting by 25s, then by 10s, then 5s and finally 1s.
+        </div>
         </div>
         <div style={{display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '5px'}}>
             <Coin value={100}/>

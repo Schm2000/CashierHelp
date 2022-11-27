@@ -3,7 +3,7 @@ import Coin from "./coin";
 function SecondPracticeSix() {
     return(
         <>
-        <div style={{margin: '20px'}}>
+        <div style={{margin: '20px', textAlign: 'left'}}>
         ...then add 10 cents to make the total $3.50. Now that we have a multiple of 25, we can start adding quarters!
         </div>
         <div>3.40</div>
@@ -17,7 +17,7 @@ function SecondPracticeSix() {
         This costs $3.31.
         </div>
         </div>
-        <img src={require('./images/clip-art-person-14.png')} height = {200} style = {{margin: '10px'}}></img>
+        <img src={require('./images/clip-art-person-20.png')} height = {200} style = {{margin: '10px'}}></img>
         <div className="bubble">
         <div style={{margin: '20px'}}>
         Here's $5.00.
