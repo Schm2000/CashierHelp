@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/CashierHelp/static/css/main.725f1d1c.css",
-    "main.js": "/CashierHelp/static/js/main.dd67e468.js",
+    "main.js": "/CashierHelp/static/js/main.992d3ac5.js",
     "static/js/845.6bdbe6bd.chunk.js": "/CashierHelp/static/js/845.6bdbe6bd.chunk.js",
     "static/js/787.542ef0e8.chunk.js": "/CashierHelp/static/js/787.542ef0e8.chunk.js",
     "static/media/success-bell.wav": "/CashierHelp/static/media/success-bell.c6c793794551b140a808.wav",
@@ -33,12 +33,12 @@
     "static/media/logo.svg": "/CashierHelp/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/CashierHelp/index.html",
     "main.725f1d1c.css.map": "/CashierHelp/static/css/main.725f1d1c.css.map",
-    "main.dd67e468.js.map": "/CashierHelp/static/js/main.dd67e468.js.map",
+    "main.992d3ac5.js.map": "/CashierHelp/static/js/main.992d3ac5.js.map",
     "845.6bdbe6bd.chunk.js.map": "/CashierHelp/static/js/845.6bdbe6bd.chunk.js.map",
     "787.542ef0e8.chunk.js.map": "/CashierHelp/static/js/787.542ef0e8.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.725f1d1c.css",
-    "static/js/main.dd67e468.js"
+    "static/js/main.992d3ac5.js"
   ]
 }
