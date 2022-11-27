@@ -4,7 +4,7 @@ function SecondPracticeNine() {
     return(
         <>
         <div style={{margin: '20px', textAlign: 'left'}}>
-        Here's another example. Susan wants to buy a hot dog, which costs $3.32. She gives $10.68 in exchange.
+        Here's another example. Susan wants to buy a hot dog, which costs $3.32. She gives $10.68 in exchange. Note that this is a challenging problem since we're not dealing with round change, so if it feels too hard for you feel free to skip!
         </div>
         <div style = {{display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
         <img src={require('./images/rijGg4BRT.png')} height = {150} style = {{margin: '10px'}}></img>

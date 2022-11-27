@@ -4,12 +4,12 @@ function PracticeFour() {
     return(
         <>
         <div style={{margin: '20px', textAlign: 'left'}}>
-        The trick is to subtract from the right to left. First, perform 8-6 to get 2:
+        The trick is to subtract from the right to left. First, perform 10-6 to get 4 and carry over a 1 for the next subtraction:
         </div>
-        <div> 6.68</div>
+        <div> 6.00</div>
         <div>-5.56</div>
         <div>----</div>
-        <div> ?.?2</div>
+        <div> ?.?4</div>
         <div style = {{display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
         <img src={require('./images/kT8neGLnc.png')} height = {150} style = {{margin: '10px'}}></img>
         <div className="bubble">
@@ -20,7 +20,7 @@ function PracticeFour() {
         <img src={require('./images/clip-art-person-13.png')} height = {200} style = {{margin: '10px'}}></img>
         <div className="bubble">
         <div style={{margin: '20px'}}>
-        Here's $6.68.
+        Here's $6.00.
         </div>
         </div>
         </div>

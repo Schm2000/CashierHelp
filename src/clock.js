@@ -28,6 +28,7 @@ function Clock() {
     const [personImage, setPersonImage] = useState(0);
     const [foodImage, setFoodImage] = useState('0');
     const [showTimer, setShowTimer] = useState(false);
+    const [diffTwo, setDiffTwo] = useState(0);
     let interval;
     const [play] = useSound(successBell);
     const [playWrong] = useSound(failureSound);
@@ -117,8 +118,23 @@ function Clock() {
         else if (diff == 3){
             valDiff = 5000
         }
-        let newCost = Math.floor(Math.random()*valDiff)/100;
-        let newCostTwo = Math.floor(Math.random()*valDiff)/100 + newCost;
+        let newCost = 0
+        let newCostTwo = 0
+        let newCostDiff = 0
+        if (diffTwo == 0){
+            newCost = Math.floor(Math.random()*valDiff)/100;
+            newCostTwo = Math.floor(Math.random()*valDiff)/100 + newCost;
+        }
+        else if (diffTwo == 1){
+            newCost = Math.floor(Math.random()*valDiff)/100;
+            newCostDiff = Math.ceil(Math.floor(Math.random()*valDiff)/100 + newCost);
+            newCostTwo = newCostDiff - newCost;
+        }
+        else{
+            newCost = Math.ceil(Math.floor(Math.random()*valDiff)/100);
+            newCostDiff = Math.ceil(Math.floor(Math.random()*valDiff)/100 + newCost);
+            newCostTwo = newCostDiff - newCost;
+        }
         if (useInterval == false){
             changeGenNumber(newCost);
             changeGenCost(newCostTwo.toFixed(2));
@@ -176,6 +192,11 @@ function Clock() {
                 setTimeMax("Max Time set off.")
             }
     }
+    }
+    const diffTwoChange = value => {
+        if (countPass == false){
+            setDiffTwo(value)
+        }
     }
     const checkCorrect = () => {
         if (changeTotal != "N/A"){
@@ -348,6 +369,31 @@ function Clock() {
           <label>
             <input type="radio" value={false} checked={showTimer == false} onChange={() => timerSwitch(false)}/>
             No
+          </label>
+        </div>
+      </form>
+        </div>
+        <div style = {showOne ? {} : {display: 'none'}}>
+            Choose level of difficulty:
+        </div>
+        <div style = {showOne ? {margin: '10px'} : {display: 'none'}}>
+        <form>
+        <div>
+          <label>
+            <input type="radio" value={0} checked={diffTwo == 0} onChange={() => diffTwoChange(0)} />
+            Hard/Any Change Amount, Any Cost.
+          </label>
+        </div>
+        <div>
+          <label>
+            <input type="radio" value={1} checked={diffTwo == 1} onChange={() => diffTwoChange(1)}/>
+            Medium/Dollar Bills Received Only, Any Cost.
+          </label>
+        </div>
+        <div>
+          <label>
+            <input type="radio" value={2} checked={diffTwo == 2} onChange={() => diffTwoChange(2)}/>
+            Easy/Dollar Bills Received Only, Dollar Bill Costs Only.
           </label>
         </div>
       </form>

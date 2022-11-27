@@ -9,9 +9,9 @@ import Coin from './coin'
 
 function ClockFour() {
     const [changeTotal, changeTotalSet] = useState(0);
-    const [genNumber, changeGenNumber] = useState(2.21);
+    const [genNumber, changeGenNumber] = useState(2.42);
     const [genNumberCost, changeGenCost] = useState(5.58);
-    const [genNumberCostDiff, changeGenDiff] = useState(7.79); 
+    const [genNumberCostDiff, changeGenDiff] = useState(8.00); 
     const [showThree, setShowThree] = useState(false);
     const [showFour, setShowFour] = useState(false);
     const [showFive, setShowFive] = useState(false);
@@ -216,7 +216,7 @@ function ClockFour() {
         setShowThree(false)
         setShowFour(false)
         setShowFive(false)
-        if (genNumber == 2.21){
+        if (genNumber == 2.42){
             imageChange()
             changeGenCost(2.46)
             changeGenDiff(10.00)
@@ -325,7 +325,7 @@ function ClockFour() {
         </div>
         </div>
         </div>
-        <div style = {showExOne ? {display: 'none'}:{}}>$7.79</div>
+        <div style = {showExOne ? {display: 'none'}:{}}>$8.00</div>
         <div style = {showExOne ? {display: 'none'}:{}}>-$5.58</div>
         <div style = {showExOne ? {display: 'none'}:{}}>----</div>
         <div style={showExOne ? {display:'none'}:{display: 'flex', alignItems: 'center', justifyContent: 'center', marginRight: '230px'}}>
@@ -333,14 +333,15 @@ function ClockFour() {
         <input style = {showExOne ? {display: 'none'}:{marginLeft: '10px'}}></input>
         </div>
         <div style = {showExTwo ? {display: 'none'}:{}}>$10.00</div>
-        <div style = {showExTwo ? {display: 'none'}:{}}>-$3.46</div>
+        <div style = {showExTwo ? {display: 'none'}:{}}>-$2.46</div>
         <div style = {showExTwo ? {display: 'none'}:{}}>----</div>
         <div style={showExTwo ? {display:'none'}:{display: 'flex', alignItems: 'center', justifyContent: 'center', marginRight: '230px'}}>
         <div>Type in answer here:  </div>
         <input style = {showExTwo ? {display: 'none'}:{marginLeft: '10px'}}></input>
         </div>
+        <div style = {showExThree ? {display: 'none'}:{}}>Here's a challenging problem! Feel free to go back to the practice menu if this is too hard for you!</div>
         <div style = {showExThree ? {display: 'none'}:{}}>$5.20</div>
-        <div style = {showExThree ? {display: 'none'}:{}}>-$4.23</div>
+        <div style = {showExThree ? {display: 'none'}:{}}>-$3.23</div>
         <div style = {showExThree ? {display: 'none'}:{}}>----</div>
         <div style={showExThree ? {display:'none'}:{display: 'flex', alignItems: 'center', justifyContent: 'center', marginRight: '230px'}}>
         <div>Type in answer here:  </div>

@@ -4,12 +4,12 @@ function PracticeFive() {
     return(
         <>
         <div style={{margin: '20px', textAlign: 'left'}}>
-        Then, subtract 6-5 to get 1.
+        Carrying over our one from earlier, we subtract 60 at the top to get 59. Now, subtract 9-5 to get 4.
         </div>
-        <div> 6.68</div>
+        <div> 6.00</div>
         <div>-5.56</div>
         <div>----</div>
-        <div> ?.12</div>
+        <div> ?.42</div>
         <div style = {{display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
         <img src={require('./images/kT8neGLnc.png')} height = {150} style = {{margin: '10px'}}></img>
         <div className="bubble">
@@ -20,7 +20,7 @@ function PracticeFive() {
         <img src={require('./images/clip-art-person-13.png')} height = {200} style = {{margin: '10px'}}></img>
         <div className="bubble">
         <div style={{margin: '20px'}}>
-        Here's $6.68.
+        Here's $6.00.
         </div>
         </div>
         </div>

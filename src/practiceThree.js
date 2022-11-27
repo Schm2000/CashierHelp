@@ -4,7 +4,7 @@ function PracticeThree() {
     return(
         <>
         <div style={{margin: '20px', textAlign: 'left'}}>
-        We'll start with this problem: Steve wants to buy strawberries that cost $5.56, but he gives $6.68.
+        We'll start with this problem: Steve wants to buy strawberries that cost $5.56, but he gives $6.00.
         </div>
         <div style = {{display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
         <img src={require('./images/kT8neGLnc.png')} height = {150} style = {{margin: '10px'}}></img>
@@ -16,7 +16,7 @@ function PracticeThree() {
         <img src={require('./images/clip-art-person-13.png')} height = {200} style = {{margin: '10px'}}></img>
         <div className="bubble">
         <div style={{margin: '20px'}}>
-        Here's $6.68.
+        Here's $6.00.
         </div>
         </div>
         </div>
